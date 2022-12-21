@@ -29,6 +29,6 @@ app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
 const HOST='0.0.0.0'
-app.listen(8800,HOST, () => {
+app.listen(process.env.PORT || 8800,HOST, () => {
   console.log("Connected!");
 });
